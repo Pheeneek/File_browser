@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer from Video</title>
+</head>
+<body>
+{% if previous_dir != 0 %}
+    <h3><a href="http://127.0.0.1:5000/make_hash/{{previous_dir}}">...</a></h3>
+{% endif %}
+    {% for i in directories %}
+    <h3><a href="http://127.0.0.1:5000//make_hash/{{current_dir + i}}">{{i}}</a></h3>
+    {% endfor %}
+    {% for f in files %}
+    <h3><a href>{{f}}</a></h3>
+    {% endfor %}
+</body>
+</html>
