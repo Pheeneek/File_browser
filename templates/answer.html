@@ -5,12 +5,14 @@
     <title>Answer from Video</title>
 </head>
 <body>
+<h2>Список папок:</h2>
 {% if previous_dir != 0 %}
-    <h3><a href="http://127.0.0.1:5000/make_hash/{{previous_dir}}">...</a></h3>
+    <h3><a href="http://127.0.0.1:5000//{{hash_dict[previous_dir]}}">...</a></h3>
 {% endif %}
     {% for i in directories %}
-    <h3><a href="http://127.0.0.1:5000//make_hash/{{current_dir + i}}">{{i}}</a></h3>
+    <h3><a href="http://127.0.0.1:5000//{{hash_dict[current_dir + i]}}">{{i}}</a></h3>
     {% endfor %}
+<h2>Список файлов:</h2>
     {% for f in files %}
     <h3><a href>{{f}}</a></h3>
     {% endfor %}
